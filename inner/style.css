@@ -1,0 +1,119 @@
+*{
+    margin:0;
+    padding:0;
+    -webkit-box-sizing:border-box;
+    box-sizing:border-box;
+}
+header
+{
+
+                background-image:-webkit-gradient(linear,left top, left bottom,from(rgba(8, 12, 12, 4.24)),to(rgba(10,10,10,0.5))), url(words.jpg);
+
+                background-image:linear-gradient(rgba(8, 12, 12, 4.24),rgba(10,10,10,0.5)), url(words.jpg);
+                background-position: center;
+                height:100vh;
+                background-attachment: fixed;
+            }
+            .box{
+                width:500px;
+                height:330px;
+                background: #fff;
+                margin-left: auto;
+                margin-right: auto;
+                margin-top: 60px;
+                text-align: center;
+            }
+            h1
+            {
+                color:#fff;
+                text-align: center;
+                margin-top: 10px;
+            }
+            h2
+            {
+                padding: 5px;
+                margin-top: 10px
+            }
+            .side
+            {
+                margin-left:65px;
+            }
+            input 
+            {
+                font-size: 150%;
+            }
+            .qsn
+            {
+                font-size: 170%;
+            }
+            button
+            {
+                cursor: pointer;   
+                font-size: 120%;
+            }
+            section
+            {
+                display: block;
+            }
+            .green
+            {
+                color: green;
+            }
+            .red
+            {
+                color: #f71010;
+            }
+            .output,.correct
+            {
+                font-size: 120%;
+                margin-top: 10px;
+            }
+            .score
+            {
+                font-size: 130%;
+                margin-right: 10px;
+                float:right;
+            }
+            .buttons button
+            {
+                margin: 8px;
+                margin-top: 10px;
+            }
+            .back-btn
+            {
+                text-decoration: none;
+                font-size: 100%;
+            }
+            .highest-score
+            {
+                float:right;
+                color: #fff;
+                margin-right: 0px;
+            }
+    @media only screen and (max-width: 767px) {
+        .box{
+                width:360px;
+                height:330px;
+                background: #fff;
+                margin-left: auto;
+                margin-right: auto;
+                margin-top: 60px;
+                text-align: center;
+            }
+}
+@media only screen and (max-width: 767px) {
+.box{
+            width:300px;
+                height:330px;
+                background: #fff;
+                margin-left: auto;
+                margin-right: auto;
+                margin-top: 60px;
+                text-align: center;
+            }
+    input
+    {
+        font-size: 120%;
+    }
+}
+      
