@@ -1,4 +1,4 @@
-var ran,wordList,ranst,jumbled,score;
+var ran,wordList,ranst,jumbled,score,gameplaying;
 wordList=[
        "abstraction","ambiguous","arithmetic","backslash","bitmap",
         "circumstance","rabbiter","radiant",
@@ -111,11 +111,14 @@ var check=()=>{
     }
 };
  document.addEventListener('keypress',function(event){
+     if(gameplaying){
         if((event.keyCode===13||event.which===13))
             {
                 if(document.querySelector('.ans').value)
                     {
                         check();
+                        document.querySelector('.next-btn').style.display='inline-block';
+                        gameplaying=false;
                     }
                 else if(!(document.querySelector('.ans').value)&&(document.querySelector('.submit-btn').style.display=='none'))
                     {
@@ -124,8 +127,9 @@ var check=()=>{
                 else
                     {
                         nothing();
-                    }
-            }
+                    } 
+        }
+    }
 });
 document.querySelector('.skip-btn').addEventListener('click',function()
 {
@@ -138,6 +142,7 @@ document.querySelector('.next-btn').addEventListener('click',function()
     document.querySelector('.skip-btn').style.display='inline-block';
     document.querySelector('.correct').textContent="";
     document.querySelector('.output').textContent="";
+    gameplaying=true;
 });
 document.querySelector('.submit-btn').addEventListener('click',function()
 {
@@ -163,5 +168,6 @@ var init=function()
   
     score=0;
     jumble();
+    gameplaying=true;
 }
 init();
