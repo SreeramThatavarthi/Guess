@@ -1,4 +1,4 @@
-var ran,wordList,ranst,jumbled,score,x=0;
+var ran,wordList,ranst,jumbled,score;
 wordList=[
        "abstraction","ambiguous","arithmetic","backslash","bitmap",
         "circumstance","rabbiter","radiant",
@@ -65,15 +65,11 @@ var nothing=()=>{
     document.querySelector('.output').classList.remove('green');
         document.querySelector('.output').classList.remove('red');
         document.querySelector('.output').textContent="Enter word";
-          console.log("Enter word");
 };
 var jumble=()=>{
     ran=random();
-    console.log(ran);
      ranst=ran;
-    console.log(wordList[ran]);
      jumbled=WordJumble(wordList[ran]);
-    console.log(jumbled);
      document.querySelector('.qsn').textContent=WordJumble(wordList[ran]);
     document.querySelector('.next-btn').style.display='none';
 };
@@ -92,7 +88,6 @@ var check=()=>{
             {
                 highscore=score;
                 document.querySelector('.highest-score').textContent=`Highest Score:${highscore}`;
-                console.log(highscore);
                 localStorage.setItem("highscore",highscore);
             }
         else{
@@ -153,8 +148,7 @@ document.querySelector('.submit-btn').addEventListener('click',function()
 
 var init=function()
 {
-    x++;
-    if(x==1){
+    if(document.querySelector('.highest-score').textContent==""){
         highscore=0;
     }
     else{
