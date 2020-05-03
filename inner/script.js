@@ -1,4 +1,4 @@
-var ran,wordList,ranst,jumbled,score;
+var ran,wordList,ranst,jumbled,score,x=0;
 wordList=[
        "abstraction","ambiguous","arithmetic","backslash","bitmap",
         "circumstance","rabbiter","radiant",
@@ -153,7 +153,8 @@ document.querySelector('.submit-btn').addEventListener('click',function()
 
 var init=function()
 {
-    if(document.querySelector('.highest-score').textContent==null){
+    x++;
+    if(x==1){
         highscore=0;
     }
     else{
