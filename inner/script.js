@@ -65,11 +65,15 @@ var nothing=()=>{
     document.querySelector('.output').classList.remove('green');
         document.querySelector('.output').classList.remove('red');
         document.querySelector('.output').textContent="Enter word";
+          console.log("Enter word");
 };
 var jumble=()=>{
     ran=random();
+    console.log(ran);
      ranst=ran;
+    console.log(wordList[ran]);
      jumbled=WordJumble(wordList[ran]);
+    console.log(jumbled);
      document.querySelector('.qsn').textContent=WordJumble(wordList[ran]);
     document.querySelector('.next-btn').style.display='none';
 };
@@ -88,6 +92,7 @@ var check=()=>{
             {
                 highscore=score;
                 document.querySelector('.highest-score').textContent=`Highest Score:${highscore}`;
+                console.log(highscore);
                 localStorage.setItem("highscore",highscore);
             }
         else{
@@ -111,7 +116,6 @@ var check=()=>{
                 if(document.querySelector('.ans').value)
                     {
                         check();
-                        document.querySelector('.next-btn').style.display='inline-block';
                     }
                 else if(!(document.querySelector('.ans').value)&&(document.querySelector('.submit-btn').style.display=='none'))
                     {
@@ -149,7 +153,12 @@ document.querySelector('.submit-btn').addEventListener('click',function()
 
 var init=function()
 {
+    if(document.querySelector('.highest-score').textContent==null){
+        highscore=0;
+    }
+    else{
        highscore=localStorage.getItem("highscore");  
+    }
     document.querySelector('.highest-score').textContent=`Highest score:${highscore}`;
   
     score=0;
