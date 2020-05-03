@@ -111,6 +111,7 @@ var check=()=>{
                 if(document.querySelector('.ans').value)
                     {
                         check();
+                        document.querySelector('.next-btn').style.display='inline-block';
                     }
                 else if(!(document.querySelector('.ans').value)&&(document.querySelector('.submit-btn').style.display=='none'))
                     {
@@ -148,12 +149,7 @@ document.querySelector('.submit-btn').addEventListener('click',function()
 
 var init=function()
 {
-    if(document.querySelector('.highest-score').textContent==""){
-        highscore=0;
-    }
-    else{
        highscore=localStorage.getItem("highscore");  
-    }
     document.querySelector('.highest-score').textContent=`Highest score:${highscore}`;
   
     score=0;
