@@ -153,8 +153,9 @@ document.querySelector('.submit-btn').addEventListener('click',function()
 
 var init=function()
 {
+    console.log()
     if(document.querySelector('.highest-score').textContent==null){
-        highscore=0;
+        localStorage.setItem("highscore",highscore);
     }
     else{
        highscore=localStorage.getItem("highscore");  
