@@ -84,6 +84,7 @@ var init=function()
 {
     ran = random();
     tri=7;
+    document.querySelector('.rem').textContent=`Remaining : ${tri} tries`;
     gameplaying=true;
      document.querySelector('.data').textContent="";
     document.querySelector('.hint').textContent="";
