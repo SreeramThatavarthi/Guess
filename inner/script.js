@@ -1,50 +1,13 @@
 var ran,wordList,ranst,jumbled,score,gameplaying;
 wordList=[
        "abstraction","ambiguous","arithmetic","backslash","bitmap",
-        "circumstance","rabbiter","radiant",
-        "combination",
-        "consequently",
-        "consortium", "decrementing",
-        "dependency",
-        "disambiguate",
-        "dynamic",
-        "encapsulation",
-        "equivalent",
-        "expression",
-        "facilitate",
-        "fragment",
-        "hexadecimal",
-        "implementation",
-        "indistinguishable",
-        "inheritance",
-        "internet",
-        "java",
-        "localization",
-        "microprocessor",
-        "navigation",
-        "optimization",
-        "parameter",
-        "patrick",    "pickle",
-        "polymorphic",
-        "rigorously",
-        "simultaneously",
-        "specification",
-        "structure",
-        "lexical",
-        "likewise",
-        "management",
-        "manipulate",
-        "mathematics",
-        "hotjava",
-        "vertex",
-        "unsigned",
-        "traditional"
+        "circumstance","rabbiter","radiant","combination","consequently","consortium", "decrementing","dependency","disambiguate","dynamic","encapsulation","equivalent","expression","facilitate","fragment","hexadecimal","implementation","indistinguishable","inheritance","internet","java","localization","microprocessor","navigation","optimization","parameter","patrick","pickle","polymorphic","rigorously","simultaneously","specification","structure","lexical","likewise","management","manipulate","mathematics","hotjava","vertex","unsigned","traditional","kingdom","kilometer","kitchen","manufacture","machine","technology","transport","technique","theatre","target","tomorrow","terrible"
     ];
 
 var random=function()
-{
-    
-     return (Math.floor(Math.random() * 45));
+{    
+    var x=wordList.length;
+     return (Math.floor(Math.random() *x));
 };
     
     
@@ -69,11 +32,8 @@ var nothing=()=>{
 };
 var jumble=()=>{
     ran=random();
-    console.log(ran);
      ranst=ran;
-    console.log(wordList[ran]);
      jumbled=WordJumble(wordList[ran]);
-    console.log(jumbled);
      document.querySelector('.qsn').textContent=WordJumble(wordList[ran]);
     document.querySelector('.next-btn').style.display='none';
 };
